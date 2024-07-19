@@ -22,7 +22,7 @@ jobs:
       run: |
         conda init zsh
         conda create -y -n pyspark_conda_env -c conda-forge pyarrow pandas conda-pack python==3.8.3
-        conda init zsh
+        source ~/.bashrc
         conda activate pyspark_conda_env
         conda pack -f -o pyspark_conda_env.tar.gz
 
