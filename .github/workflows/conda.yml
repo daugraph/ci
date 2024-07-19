@@ -27,4 +27,8 @@ jobs:
         conda deactivate
         conda activate pyspark_conda_env
         conda pack -f -o pyspark_conda_env.tar.gz
-
+    - name: conda venv result
+      uses: actions/upload-artifact@v4
+      with:
+        name: pyspark_conda_env.tar.gz
+        path: pyspark_conda_env.tar.gz
