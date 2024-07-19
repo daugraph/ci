@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         echo $SHELL
-        conda create -y -n pyspark_conda_env -c conda-forge pyarrow pandas conda-pack python==3.8.3
+        conda create -y -n pyspark_conda_env -c conda-forge pyarrow scikit-learn==1.3.2 scipy==1.10.1 pandas==2.0.3 conda-pack python==3.8.3
         source ~/.bashrc
         source activate
         conda deactivate
