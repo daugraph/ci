@@ -20,6 +20,7 @@ jobs:
         echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
       run: |
+        conda init zsh
         conda create -y -n pyspark_conda_env -c conda-forge pyarrow pandas conda-pack python==3.8.3
         conda init zsh
         conda activate pyspark_conda_env
